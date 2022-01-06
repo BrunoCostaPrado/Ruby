@@ -1,5 +1,5 @@
 require "benchmark"
-num= 30_000_000
+num= 999_000_000
 Benchmark.bm do |x|
     x.report("FOR") {for i in 1..num;a="1"; end}
     x.report(".TIMES"){num.times do a="1";end}
@@ -8,4 +8,5 @@ Benchmark.bm do |x|
     x.report("LOOP"){n=1; loop do a="1";n+=1; break if n==num;end}
     x.report("WHILE"){n=1; while n<= num do a="1";n+=1;end}
     x.report("BEGIN"){n=num; begin a="1"; n-=1; end while n>0}
+    puts "Benchmark feito com "+num.to_s
 end
