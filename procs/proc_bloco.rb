@@ -1,6 +1,6 @@
-processo= lambda do |arg_simples, *multiplo_args, &bloco|
-    puts "Arg simples =#{arg_simples.inspect}"
-    puts "Arg multiplos =#{multiplo_args.inspect}"
+processo = lambda do |argumento_simples, *multiplo_argumentos, &bloco|
+    puts "Argumento simples = #{argumento_simples.inspect}"
+    puts "Multiplos argumentos  = #{multiplo_argumentos.inspect}"
     bloco.call
 end
 
