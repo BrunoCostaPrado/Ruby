@@ -8,6 +8,6 @@ Benchmark.bm do |x|
     x.report("LOOP"){n=1; loop do a="1";n+=1; break if n==num;end}
     x.report("WHILE"){n=1; while n<= num do a="1";n+=1;end}
     x.report("BEGIN"){n=num; begin a="1"; n-=1; end while n>0}
-    puts "Benchmark feito com "+num.to_s
+    puts "Benchmark feito com "+num.to_s+" numeros"
     puts x
 end
